@@ -1,0 +1,13 @@
+Filter by name:
+<input type="text" ng-model="nameFilter">
+<ul>
+    <li class="ng-cloak" ng-repeat="product in products | filter:nameFilter | orderBy:'name'" product="product">
+    
+    </li>
+</ul>
+<form ng-submit="addProduct()">
+    Name:
+    <input type="text" ng-model="newName"> Price:
+    <input type="text" min=".01" ng-model="newPrice">
+    <button>add</button>
+</form>
